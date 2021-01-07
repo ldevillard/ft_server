@@ -6,7 +6,7 @@
 #    By: ldevilla <ldevilla@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/28 12:22:11 by ldevilla          #+#    #+#              #
-#    Updated: 2021/01/07 13:02:45 by ldevilla         ###   ########lyon.fr    #
+#    Updated: 2021/01/07 16:06:12 by ldevilla         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,10 @@ RUN apt-get update
 RUN apt-get -y install nginx
 RUN apt-get -y install php 
 RUN apt-get -y install php-fpm
+RUN apt-get -y install mariadb-server
+RUN apt-get -y install php-json php-mbstring
+RUN apt-get -y install wget
 
-COPY srcs/* /srcs
+COPY srcs/* srcs/
 
 CMD sh srcs/start.sh
