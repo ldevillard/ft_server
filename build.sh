@@ -2,3 +2,4 @@ docker build -t test .
 docker run -ti --rm -p 80:80 --name=testc test
 
 #docker exec -ti *nomconteneurouid* bash
+#docker system prune

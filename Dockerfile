@@ -6,7 +6,7 @@
 #    By: ldevilla <ldevilla@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/28 12:22:11 by ldevilla          #+#    #+#              #
-#    Updated: 2021/01/08 11:26:50 by ldevilla         ###   ########lyon.fr    #
+#    Updated: 2021/01/08 12:21:05 by ldevilla         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,9 @@ RUN apt-get -y install wget
 RUN apt-get -y install php-mysqlnd
 
 COPY srcs/* srcs/
+
+ENV USER='test'
+ENV PASSWORD='yeah'
 
 EXPOSE 80 443
 
