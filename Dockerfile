@@ -6,7 +6,7 @@
 #    By: ldevilla <ldevilla@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/28 12:22:11 by ldevilla          #+#    #+#              #
-#    Updated: 2021/01/07 16:06:12 by ldevilla         ###   ########lyon.fr    #
+#    Updated: 2021/01/08 11:26:50 by ldevilla         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,10 @@ RUN apt-get -y install php-fpm
 RUN apt-get -y install mariadb-server
 RUN apt-get -y install php-json php-mbstring
 RUN apt-get -y install wget
+RUN apt-get -y install php-mysqlnd
 
 COPY srcs/* srcs/
+
+EXPOSE 80 443
 
 CMD sh srcs/start.sh
